@@ -53,4 +53,17 @@
  *git config --local user.email yublee55@gmail.com
  *git add .
  *git commit -m "comment"
- *git push
+ *git push https:
+
+ 
+
+ ## 원격저장소와 연결된 프로젝트에 새로운 코드 추가하기
+
+*git add .
+*git commit -m "Hello_02추가"
+* git push https://github.com/leebin55/Biz_403_2021_Java.git master
+
+##원격저장소 주소를 단축하여 입력하기
+1. 원격저장소 주소를 별명으로 설정하기
+* git remote add origin https://github.com/leebin55/Biz_403_2021_03_Java.git master
+
