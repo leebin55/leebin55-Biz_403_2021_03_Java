@@ -13,8 +13,8 @@ public class Cont_06 {
 		System.out.println(strKor + "점수 : " + intKor );
 		System.out.println(strEng + "점수 : " + intEng );
 		System.out.println("------------------------------");
-		System.out.printf("%s 국어 점수 : %d\n", strKor, intKor);
-		System.out.printf("%s 영어 점수 : %d\n",strEng,intEng);
+		System.out.printf("%s 점수 : %d\n", strKor, intKor);
+		System.out.printf("%s 점수 : %d\n", strEng, intEng);
 		
 		String strNation = "우리나라 대한민국";
 		System.out.println("===================================");

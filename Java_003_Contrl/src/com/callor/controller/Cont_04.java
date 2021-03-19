@@ -33,11 +33,11 @@ public class Cont_04 {
 			//intSum = intSum + intNum;
 			
 			intSum += intNum;
-			System.out.println(intSum); //for()안
-			System.out.println("==============================");
+			System.out.println("intSum" + intSum); //for()안
+			
 		}
 		System.out.println(intSum); //for() 밖
-		System.out.println("===============================");
+		
 		intSum = 0;
 		for(int i = 0 ; i < 10 ; i++)
 		{
@@ -45,6 +45,7 @@ public class Cont_04 {
 			intSum +=n;
 			
 		}
+	
 		System.out.println(intSum);
 		System.out.println("===============================");
 		intSum = 0;
@@ -61,19 +62,20 @@ public class Cont_04 {
 			intSum += intNum;
 			
 		}
-		System.out.println(intSum);
+		System.out.println("이쪽:" +intSum);
 		System.out.println("===============================");
 
 		
 		for(int index = 0; index < 10 ; index += 2) {
-			System.out.println(index);
+			System.out.println("여기:" + index);
 			
-		}
+		}System.out.println("intNum값" +intNum );
 		System.out.println("===============================");
-	
+		intNum = 0;
 		for(int index = 0; index < 10 ; index += 2) {
 			intNum += index + 1;
-			System.out.println(intNum);
+		
+			System.out.println("intNum?" + intNum);
 		}	
 		
 	}
