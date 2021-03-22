@@ -7,10 +7,14 @@ public class Controller_14 {
 	public static void main(String[] args) {
 		
 		Random rnd = new Random();
+		int intKor = 0;
+		int intEng = 0;
+		int intMath = 0;
 		
-		int intKor = rnd.nextInt(100) + 1;
-		int intEng = rnd.nextInt(100) + 1;
-		int intMath = rnd.nextInt(100) + 1;
+		
+		intKor = rnd.nextInt(100) + 1;
+		intEng = rnd.nextInt(100) + 1;
+		intMath = rnd.nextInt(100) + 1;
 		 
 		int intSum = 0;
 		float floatAvg = 0;

@@ -5,7 +5,11 @@ import java.util.Random;
 public class Controller_13 {
 
 	public static void main(String[] args) {
-		
+		/*
+		 * intSum 변수를 어디에 선언할까?
+		 * 짝수들을 어디에서 합산 (누적)할까
+		 * 어디에서 출력을 할까
+		 */
 		Random rnd = new Random();
 		
 		int intSum = 0;
