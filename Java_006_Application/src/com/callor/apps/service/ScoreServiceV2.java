@@ -4,7 +4,16 @@ import java.util.Random;
 //메서드가 짧게 짧게
 public class ScoreServiceV2 {
 
+	/*
+	 * 클래스 영역에 선언된 변수 
+	 * - 누군가 이 클래스를 사용하여 인스턴스를 생성하면
+	 * 	 자동으로 예약이 되는 변수들
+	 * 인스턴스변수 또는 인스턴스 영역변수 또는 클래스의 멤버변수
+	 * 클래스 영역에 선언된 변수는
+	 * 			클래스에 포함된 method 에서 변수를 사용 (읽기,쓰기)를 할수 있다.
+	 */
 	Random rnd ;
+	
 	int[] intKor;
 	int[] intEng;
 	int[] intMath;

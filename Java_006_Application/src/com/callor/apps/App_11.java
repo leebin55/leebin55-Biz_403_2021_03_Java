@@ -6,6 +6,9 @@ import java.util.Random;
 public class App_11 {
 
 	public static void main(String[] args) {
+		
+		//main() method의 멤버변수
+		//method변수
 		//정수 배열 45개 선언
 		int[] intNums = new int[45];
 		
