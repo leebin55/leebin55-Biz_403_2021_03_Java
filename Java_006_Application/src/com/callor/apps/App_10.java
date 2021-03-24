@@ -45,7 +45,7 @@ public class App_10 {
 		 * i : 기준이 되는값
 		 * j : 비교가
 		 *  
-		 *  배열의 오름차순 정렬 코드
+		 *  배열의 오름차순 정렬코드
 		 *  
 		 */
 		for(int i = 0; i < intNums.length; i++) {
