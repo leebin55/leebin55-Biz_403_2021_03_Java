@@ -88,10 +88,15 @@ public class PrimeServiceV1 {
 			 int num = 0;
 			 for(num = 2 ; num <numP ; num++) {
 				 if(numP % num == 0) {
-					 System.out.println(numP + "소수아님");
-				 }else {
-					 System.out.println(numP + "소수");
+					 break;
+					
 				 }
+					
+			 }
+			 if(num < numP) {
+				 System.out.println(numP + "는 소수아님");
+			 }else {
+				 System.out.println(numP + "는 소수");
 			 }
 		 }
 		 

@@ -29,7 +29,7 @@ public class App_02 {
 		psV1.printPrime();
 		
 		PrimeServiceV1 psV11 = new PrimeServiceV1();//psV1과 psV11는 둘이 완전이 다름
-													//독립적
+													//독립적d
 		psV1.makeNums();
 		psV1.printPrime();
 		

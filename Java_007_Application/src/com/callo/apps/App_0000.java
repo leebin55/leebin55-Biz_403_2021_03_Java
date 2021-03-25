@@ -1,10 +1,10 @@
 package com.callo.apps;
 
 import java.util.Random;
-//소수가 아닌값 찾기
-public class App_01_B {
 
-	public static void main(String[] args) {
+public class App_0000 {
+
+public static void main(String[] args) {
 		
 		Random rnd = new Random() ;
 		int[] intNums = new int[20];
@@ -17,16 +17,19 @@ public class App_01_B {
 			int num = 0;//num을 별도로 선언해서 사용
 			int numP = intNums[arr];
 			for(num = 2 ; num < numP ; num++) {//소수찾을때 for(num =2;;)처럼 2부터 시작
-				
+				System.out.println("num" + num);
+				System.out.println("numP : " +numP);
 				if (numP % num == 0) {
 					break;
 				}
 			}
-			if(num < numP) {
-				System.out.println(numP + "는 소수아님");
-			}else { //for 반복문에서 i++때문에 
-				System.out.println(numP + "는 소수");//num==numP
+			if(num >= numP) {
+				System.out.println(num + "는 소수");
+			}
+				
 			}
 		}
-	}
+	
 }
+
+

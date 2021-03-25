@@ -64,6 +64,8 @@ public class App_01_A {
 			if (num2 % num == 0) {
 				break;
 			}
+			System.out.println(num);
+			System.out.println(num2);
 			//논리적오류를 일으킬 가능성이 있다.
 			//num >=num2 (num ==num2보다 앞에 처럼 부등호이용하기) 
 			//boolean은 값이 두개기때문에 상관 없음
@@ -72,7 +74,7 @@ public class App_01_A {
 			}else {
 				System.out.println(num2 + "소수아님");
 			}
-			
+			System.out.println(num);
 			//논리적인 오류를 최소화 하기 위하여
 			//비교연산자를 1개만 사용하여 검사할 수 있는 코드를 사용하는 것이 좋다
 			if(num < num2) {

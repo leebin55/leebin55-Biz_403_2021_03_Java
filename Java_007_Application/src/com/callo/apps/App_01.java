@@ -13,15 +13,12 @@ public class App_01 {
 		for (int i = 0; i < intNums.length; i++) {
 			intNums[i] = rnd.nextInt(51) + 50;
 
-			for (int j = 2; j < intNums[i]; j++) {
-				if (intNums[i] % (j + 1) == 0) {
-					
-					break;
+			
 				}
+	
 
 			}
 			
-		}
+		
 
 	}
-}
