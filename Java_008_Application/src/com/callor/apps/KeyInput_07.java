@@ -27,7 +27,7 @@ public class KeyInput_07 {
 				nCount = 0;
 				rndNum = rnd.nextInt(20)+ 1;
 			}
-			System.out.println("1 부터 10까지 정수 입력!!");
+			System.out.println("1 부터 20까지 정수 입력!!");
 			System.out.print(">>  ");
 			int inputNum = scan.nextInt();
 			
