@@ -5,6 +5,15 @@ import java.util.Scanner;
 public class ScoreServiceV5 {
 
 	String[] subject;
+	
+	/*
+	 * 3과목의 점수를 저장할 배열을 10개 만들었다고 가정
+	 * 
+	 *8번 요소의 배열에 각각 점수를 저장(첨자 = point 가 중요 )
+	 * intKor[8] = 90;
+	 * intEng[8] = 70;
+	 * intMath[8] = 66;
+	*/
 	int[] intKor;
 	int[] intEng;
 	int[] intMath;

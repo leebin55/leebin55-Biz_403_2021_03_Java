@@ -1,0 +1,57 @@
+package com.callor.apps;
+
+import com.callor.apps.model.ScoreVO;
+
+public class ScoreEx_01 {
+
+	public static void main(String[] args) {
+		int 홍길동_kor = 80;
+		int 홍길동_math = 100;
+		int 홍길동_eng=90;
+		
+		int 홍길동_total = 홍길동_kor + 홍길동_math + 홍길동_eng;
+		
+		int 이몽룡_kor = 99;
+		int 이몽룡_math= 88;
+		int 이몽룡_eng = 77;
+		/*
+		 * ScoreVO클래스 없이 위에같이 하면
+		 * 필요한 데이터가 있으면 변수가 더 많이 필요 > 객체가 나오기 전까지 
+		 *
+		 * 
+		 * 클래스를 이용해 객체생성을 하고 객체.;형식으로 데이터 관리 >>객체지향프로그래밍
+		 */
+
+		//ScoreVO 클래스에 디자인된 코드를 보면
+		//변수들이 있고
+		//getTotal(), getAvg() method가 있다
+		//ScoreVO 클래스를 사용하여 만들어진 객체는
+		//일부러 다른 데이터를 저장하지 않는 한
+		//같은 사람의 데이터일 것이고 
+		//과목 점수만 잘 저장되어있으면 
+		//언제든지 총점과 평균을 method를 통해서 얻어낼 수 있다.
+		ScoreVO 홍길동 = new ScoreVO();
+		
+		홍길동.num = 1;
+		홍길동.name = "홍길동";
+		홍길동.kor=90;
+		홍길동.eng=80;
+		홍길동.math=100;
+		
+		System.out.println("홍길동 총점 : " + 홍길동.getTotal());
+		System.out.println("홍길동 평균 : " + 홍길동.getAvg());
+		
+		ScoreVO 이몽룡 = new ScoreVO();
+		
+		이몽룡.num=2;
+		이몽룡.kor = 99;
+		이몽룡.eng=80;
+		이몽룡.math=100;
+
+		System.out.println("이몽룡 총점 : " + 이몽룡.getTotal());
+		System.out.println("이몽룡 평균 : " + 이몽룡.getAvg());
+		
+		
+	
+	}
+}
