@@ -108,7 +108,7 @@ public class ScoreServiceV1A {
 	 *  but, return type 이 void형이 아닌 경우
 	 *  		return 명령문은 반드시 코드 내에 
 	 *  		적절한 위치에 있어야 하고
-	 *  	return 값 형식을 사용해야 함
+	 *  	return 값; 형식을 사용해야 함
 	 */
 	private Integer inputScore() { //다른 코드 없더라도 "return 값;"이 무조건 있어야 함
 		return null;
