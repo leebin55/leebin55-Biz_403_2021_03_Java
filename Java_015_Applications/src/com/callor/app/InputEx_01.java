@@ -11,5 +11,7 @@ public class InputEx_01 {
 		
 		isV1.inputValue("새우깡");
 		isV1.inputValue("새우깡" , 0, 100);
+		
+		System.out.println(isV1.toString());
 	}
 }
