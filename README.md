@@ -8,7 +8,7 @@
 4. IDE ( Intergration Developer Environment) : 통합 개발 환경
 5. Sublime Text 로 코드를 작성
 	가. sublime text  파일 생성, 코드 작성
-	나. 컴파일 : javax
+	나. 컴파일 : javac
 	다. 실행 : java
 6. IDE : 개발을 할 때 쉽고 빠르게 사용할 수 있는 도구
 	가. IDE 화면에서 코드 작성 
