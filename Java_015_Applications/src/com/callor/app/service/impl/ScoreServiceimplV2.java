@@ -5,7 +5,7 @@ import com.callor.app.model.ScoreVO;
 //V1에는 ScoreService 인터페이스가 impl 되어있기 때문에
 //V1을 상속받으면 자동으로 인터페이스도 상속받게 된다
 
-public class ScoreServiceimplV2A extends ScoreServiceImplV1T {
+public class ScoreServiceimplV2 extends ScoreServiceImplV1T {
 
 	/*
 	 * scoreList 에 성적정보를 추가할 때 학번을 입력받을텐데 이미 등록된 학번 정보가 있으면 그 학번은 추가 하지 못하도록 하는 코드

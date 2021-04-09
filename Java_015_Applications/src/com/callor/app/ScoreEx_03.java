@@ -1,13 +1,13 @@
 package com.callor.app;
 
 import com.callor.app.service.ScoreService;
-import com.callor.app.service.impl.ScoreServiceimplV2A;
+import com.callor.app.service.impl.ScoreServiceimplV2;
 
 public class ScoreEx_03 {
 
 	public static void main(String[] args) {
 		
-	ScoreService sService = new ScoreServiceimplV2A();
+	ScoreService sService = new ScoreServiceimplV2();
 	sService.selectMenu();
 	}
 }

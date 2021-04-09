@@ -2,7 +2,7 @@ package com.callor.app.service.impl;
 
 import com.callor.app.model.ScoreVO;
 
-public class ScoreServiceImplV2 extends ScoreServiceImplV1T {
+public class ScoreServiceImplV2A extends ScoreServiceImplV1T {
 
 	private String inputNum1() {
 
