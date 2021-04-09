@@ -78,7 +78,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 	}
 	@Override
 	public void inputScore() {
-		// TODO Auto-generated method stub
+		// TODO 0에서 100까지 정수만 입력
 
 		String strNum = this.inputNum();
 		String strName = this.inputName();
@@ -112,7 +112,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 		scVO.setName(strName);
 		scVO.setNum(strNum);
 		scoreList.add(scVO);
-		this.selectMenu();
+		return;
 		/*
 		 * while (true) { String strName = this.inputName(); System.out.println(strName
 		 * + "학생의 국어성적"); System.out.print(" >>  "); String strKor = scan.nextLine();
@@ -156,5 +156,6 @@ public class ScoreServiceImplV1 implements ScoreService {
 			System.out.print(vo.getTotal() + "\t");
 			System.out.printf("%3.2f\n", vo.getAvg());
 		}
+		return;
 	}
 }
