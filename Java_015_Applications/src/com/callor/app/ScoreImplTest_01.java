@@ -2,7 +2,7 @@ package com.callor.app;
 
 import com.callor.app.service.impl.ScoreServiceImplV1;
 
-public class ScoreTest_01 {
+public class ScoreImplTest_01 {
 
 	public static void main(String[] args) {
 		

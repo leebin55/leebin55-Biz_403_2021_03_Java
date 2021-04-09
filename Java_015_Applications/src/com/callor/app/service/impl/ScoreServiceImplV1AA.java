@@ -7,13 +7,13 @@ import java.util.Scanner;
 import com.callor.app.model.ScoreVO;
 import com.callor.app.service.ScoreService;
 
-public class ScoreServiceImplV1A implements ScoreService {
+public class ScoreServiceImplV1AA implements ScoreService {
 
 	protected Scanner scan;
 	List<ScoreVO> scoreList;
 	String[] subs;
 
-	public ScoreServiceImplV1A() {
+	public ScoreServiceImplV1AA() {
 		scan = new Scanner(System.in);
 		scoreList = new ArrayList<ScoreVO>();
 		subs = new String[] { "국어", "영어", "수학" };
@@ -59,30 +59,47 @@ public class ScoreServiceImplV1A implements ScoreService {
 
 	@Override
 	public String inputName() {
-		// TODO Auto-generated method stub
+		// TODO 이름입력 : 빈칸이면 다시 / QUIT 이면 다시 선택메뉴로 
+		while(true) {
 		System.out.println("┌──────────┐");
 		System.out.println("│   이름   │");
 		System.out.println("└──────────┘");
-		System.out.print(" >> ");
+		System.out.print("이름( 종료할때는 QUIT ) >> ");
 		String name = scan.nextLine();
+		if (name.trim().equals("QUIT")) {
+			System.out.println("【  선택메뉴로 돌아갑니다 】");
+			this.selectMenu();
+		}else if(name.trim().equals("")) {
+			System.out.println("【  이름을 입력해 주세요 】");
+			continue;
+			
+		}
 		return name;
-
+		}
 	}
 
 	public String inputNum() {
+
 		while (true) {
 			System.out.println("┌──────────┐");
 			System.out.println("│   학번   │");
 			System.out.println("└──────────┘");
-			System.out.print(" >> ");
+			System.out.print("학번 ( 종료할때는 QUIT ) >> ");
 			String strNum = scan.nextLine();
+			if (strNum.trim().equals("QUIT")) {
+				System.out.println("【  선택메뉴로 돌아갑니다 】");
+				this.selectMenu();
+			} else if (strNum.trim().equals("")) {
+				System.out.println("【  학번을 입력해 주세요 】");
+				continue;
+			}
 			return strNum;
 		}
 	}
 
 	@Override
 	public void inputScore() {
-		// TODO 5명의 학생
+		// TODO 5명 학생의 점수 받기
 		for (int index = 0; index < 5; index++) {
 			String strNum = this.inputNum();
 			String strName = this.inputName();
@@ -136,9 +153,8 @@ public class ScoreServiceImplV1A implements ScoreService {
 
 	}
 
-	private void checkNum() {
-
-	}
+	
+	
 
 	@Override
 	public void printScore() {

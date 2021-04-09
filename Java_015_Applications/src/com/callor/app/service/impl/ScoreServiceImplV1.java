@@ -26,10 +26,12 @@ public class ScoreServiceImplV1 implements ScoreService {
 			System.out.println("┌──────────┐");
 			System.out.println("│ 메뉴선택 │");
 			System.out.println("└──────────┘");
-			System.out.println();
-			System.out.println(" ① 성적입력");
-			System.out.println(" ② 성적출력");
-			System.out.println(" ③ 종료");
+
+			System.out.println("┌────────────────────────┐");
+			System.out.println("│ ① 성적입력            │");
+			System.out.println("│ ② 성적출력            │");
+			System.out.println("│ ③ 종료                │");
+			System.out.println("└────────────────────────┘");
 			System.out.println("-".repeat(70));
 			System.out.print("보기선택 >> ");
 			String strMenu = scan.nextLine();
@@ -57,25 +59,43 @@ public class ScoreServiceImplV1 implements ScoreService {
 
 	@Override
 	public String inputName() {
-		// TODO Auto-generated method stub
-		System.out.println("┌──────────┐");
-		System.out.println("│   이름   │");
-		System.out.println("└──────────┘");
-		System.out.print(" >> ");
-		String name = scan.nextLine();
-		return name;
+		// TODO 학생의 이름 입력 (QUIT : 선택메뉴로 / 빈칸 : 다시입력)
+		while (true) {
+			System.out.println("┌──────────┐");
+			System.out.println("│   이름   │");
+			System.out.println("└──────────┘");
+			System.out.print(" >> ");
+			String name = scan.nextLine();
+			if (name.trim().equals("QUIT")) {
+				System.out.println("【  선택메뉴로 돌아갑니다 】");
+				this.selectMenu();
+			} else if (name.trim().equals("")) {
+				System.out.println("【  이름을 입력해 주세요 】");
+				continue;
+			}
+			return name;
+		}
 	}
 
 	public String inputNum() {
+		// TODO 학생의 학번 입력 (QUIT : 선택메뉴로 / 빈칸 : 다시입력)
 		while (true) {
 			System.out.println("┌──────────┐");
 			System.out.println("│   학번   │");
 			System.out.println("└──────────┘");
 			System.out.print(" >> ");
 			String strNum = scan.nextLine();
+			if (strNum.trim().equals("QUIT")) {
+				System.out.println("【  선택메뉴로 돌아갑니다 】");
+				this.selectMenu();
+			} else if (strNum.trim().equals("")) {
+				System.out.println("【  학번을 입력해 주세요 】");
+				continue;
+			}
 			return strNum;
 		}
 	}
+
 	@Override
 	public void inputScore() {
 		// TODO 0에서 100까지 정수만 입력
@@ -136,8 +156,26 @@ public class ScoreServiceImplV1 implements ScoreService {
 		 */
 	}
 
-	private void checkNum() {
+	private String scoreGrade() {
+		String strGrade = null;
+		for(int i = 0; i < scoreList.size(); i++) {
+			Integer totalScore = scoreList.get(i).getTotal();
+			if(totalScore > 250) {
+				strGrade = "최우수";
+				break;
+			}else if(totalScore > 200) {
+				strGrade = "우수";
+				break;
+			}else if(totalScore > 150) {
+				strGrade = "보통";
+				break;
+			}else {
+				strGrade = "노력필요";
+			}
+		}
+		return strGrade;
 	}
+
 	@Override
 	public void printScore() {
 		// TODO 성적출력
@@ -145,7 +183,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 		System.out.println("=".repeat(70));
 		System.out.println("성정출력");
 		System.out.println("=".repeat(70));
-		System.out.println("학번\t 이름\t국어\t영어\t수학\t총점\t평균");
+		System.out.println("학번\t 이름\t국어\t영어\t수학\t총점\t평균\t등급");
 		for (int i = 0; i < scoreList.size(); i++) {
 			ScoreVO vo = scoreList.get(i);
 			System.out.print(vo.getNum() + "\t");
@@ -154,7 +192,9 @@ public class ScoreServiceImplV1 implements ScoreService {
 			System.out.print(vo.getEng() + "\t");
 			System.out.print(vo.getMath() + "\t");
 			System.out.print(vo.getTotal() + "\t");
-			System.out.printf("%3.2f\n", vo.getAvg());
+			System.out.printf("%3.2f\t", vo.getAvg());
+			System.out.println(this.scoreGrade());
+			System.out.println();
 		}
 		return;
 	}
