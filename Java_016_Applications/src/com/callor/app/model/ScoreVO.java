@@ -8,8 +8,7 @@ public class ScoreVO {
 	private Integer eng;
 	private Integer math;
 
-	private Integer total;
-	private Float avg;
+	
 	public String getNum() {
 		return num;
 	}
@@ -41,21 +40,26 @@ public class ScoreVO {
 		this.math = math;
 	}
 	public Integer getTotal() {
+		Integer total = this.kor;
+		total += this.eng;
+		total += this.math;
 		return total;
 	}
-	public void setTotal(Integer total) {
-		this.total = total;
-	}
+	
+	
 	public Float getAvg() {
+		//java style
+		Float avg = (float)this.getTotal()/3;
+		//c언어 style
+		avg = Float.valueOf(this.getTotal()/3);
 		return avg;
-	}
-	public void setAvg(Float avg) {
-		this.avg = avg;
+	
+	
 	}
 	@Override
 	public String toString() {
 		return "ScoreVO [num=" + num + ", name=" + name + ", kor=" + kor + ", eng=" + eng + ", math=" + math
-				+ ", total=" + total + ", avg=" + avg + "]";
+				+ ", total=" + this.getTotal() + ", avg=" + this.getAvg() + "]";
 	}
 
 }
