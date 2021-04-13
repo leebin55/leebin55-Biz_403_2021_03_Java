@@ -105,7 +105,7 @@ public class ScoreVO {
 		// java style
 		Float avg = (float) this.getTotal() / 3;
 		// c언어 style
-		avg = Float.valueOf(this.getTotal() / 3);
+		//avg = Float.valueOf(this.getTotal() / 3);
 		return avg;
 
 	}

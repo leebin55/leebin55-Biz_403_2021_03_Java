@@ -1,9 +1,10 @@
-package com.callor.score.service;
+package com.callor.score.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.callor.score.model.ScoreVO;
+import com.callor.score.service.ScoreService;
 import com.yublee.standard.impl.MenuServiceImplV1;
 
 //인터페이스에서 객체를 생성할 수 없음

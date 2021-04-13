@@ -20,9 +20,6 @@ public class ScoreServiceEx_01 implements ScoreService{
 		MenuServiceImplV1 inSer = new MenuServiceImplV1(title,menuList);
 		
 		Integer menu = inSer.selectMenu();
-	
-		
-		
 		
 	}
 
