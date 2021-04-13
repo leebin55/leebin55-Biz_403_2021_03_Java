@@ -11,6 +11,10 @@ import com.yublee.standard.MenuService;
  * 업무 번호를 입력하면 해당 업무를 return
  * 
  * QUIT 입력하면 null 을 return
+ * 
+ * new MenuServicImplV1() 형식으로 작성이 안됨
+ * 반드시 String, List형 두개의 값을 전달해 주어야 함
+ * new MenuServiceImplV1(title, menuList)형식으로 작성
  */
 public class MenuServiceImplV1 implements MenuService {
 
