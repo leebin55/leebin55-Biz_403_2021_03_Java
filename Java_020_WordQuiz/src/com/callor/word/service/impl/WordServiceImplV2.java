@@ -32,9 +32,13 @@ public class WordServiceImplV2 extends WordServiceImplV1 {
 	public WordServiceImplV2() { // 생성자를 생성
 		score = new ScoreVO(3); // 변수를 모아서 사용
 		basePath = "src/com/callor/word/";
+<<<<<<< HEAD
 		
 		this.loadScore(); //시작과 동시에 loadScore 호출 
 		
+=======
+		this.loadScore();
+>>>>>>> 641be72b65ea6a3af4784784df32bc1ef1e038db
 	}
 
 	/*
@@ -51,7 +55,10 @@ public class WordServiceImplV2 extends WordServiceImplV1 {
 		while (true) {
 			score.set힌트보기(0);
 			score.set재도전(3);
+<<<<<<< HEAD
 			//게임용 단어만들기
+=======
+>>>>>>> 641be72b65ea6a3af4784784df32bc1ef1e038db
 			int nWordIndex = rnd.nextInt(nWordCount);
 			WordVO wordVO = wordList.get(nWordIndex);
 			// getShuffleWord를 사용하지 않고 직접 shuffleWord를 호출
@@ -59,8 +66,13 @@ public class WordServiceImplV2 extends WordServiceImplV1 {
 			while (true) {
 				String strInput = this.inputWord(viewWord);
 				if (strInput.equals("QUIT")) {
+<<<<<<< HEAD
 					this.viewScore(); //점수를 보여주고
 					this.saveScore(); // 점수를 저장
+=======
+					this.viewScore();
+					this.saveScore();
+>>>>>>> 641be72b65ea6a3af4784784df32bc1ef1e038db
 					System.out.println("게임종료");
 					return;
 				} else if (strInput.equals("1")) {
@@ -79,6 +91,10 @@ public class WordServiceImplV2 extends WordServiceImplV1 {
 					// // if(wordVO.getEnglish().equalsIgnoreCase(strInput)) {
 					// System.out.println("CORRECT");
 					// }
+					if(score.get재도전()<=0) {
+						System.out.println("재도전 기회가 없음");
+						break;
+					}
 				}
 			}
 		}
@@ -114,12 +130,21 @@ public class WordServiceImplV2 extends WordServiceImplV1 {
 	protected void viewScore() {
 		System.out.println("=".repeat(50));
 		System.out.println("현재 점수");
+<<<<<<< HEAD
 		System.out.println("-".repeat(50));
 		System.out.printf("맞은개수 :%d\n", score.get맞은개수());
 		System.out.printf("틀린개수 :%d\n", score.get틀린개수());
 		System.out.printf("포인트 :%d\n", score.get포인트());
 		System.out.printf("힌트보기 :%d\n", score.get힌트보기());
 		System.out.printf("재도전 :%d\n", score.get재도전());
+=======
+		System.out.println("=".repeat(50));
+		System.out.printf("맞은개수 : %d\n",score.get맞은개수());
+		System.out.printf("틀린개수 : %d\n",score.get틀린개수());
+		System.out.printf("포인트 : %d\n",score.get포인트());
+		System.out.printf("힌트확인 : %d\n",score.get힌트보기());
+		System.out.printf("재도전 : %d\n",score.get재도전());
+>>>>>>> 641be72b65ea6a3af4784784df32bc1ef1e038db
 		System.out.println("=".repeat(50));
 	}
 
@@ -163,7 +188,7 @@ public class WordServiceImplV2 extends WordServiceImplV1 {
 			String fileName = scan.nextLine();
 			if(fileName.trim().equals("")) {
 				System.out.println("게임 첨부터 시작한다");
-				score = new ScoreVO();// ScoreVO 초기화 
+				score = new ScoreVO(3);// ScoreVO 초기화 
 				return;
 			}
 			FileReader fileReader = null;
