@@ -7,8 +7,11 @@ public class MainEx_02 {
 	public static void main(String[] args) {
 		
 		ScoreVo scoreVO[] = new ScoreVo[10];
-		
 		//배열을 생성만 함 초기화 하지 않음
+		//배열 을 저장할 자리만
+		
+		
+		
 		int index = 3;
 		scoreVO[index].setNum("0001");
 		scoreVO[index].setKor(90);

@@ -7,8 +7,8 @@ import com.callor.fine.model.ScoreVo;
 
 public class ScoreServiceImplV1 implements ScoreService{
 	
-	private List<ScoreVo> scoreList;	
-	private Scanner scan;
+	protected List<ScoreVo> scoreList;	
+	protected Scanner scan;
 	
 	public ScoreServiceImplV1() {
 	}
